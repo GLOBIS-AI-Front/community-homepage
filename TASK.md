@@ -2,7 +2,7 @@
 
 進捗ステータス: `TODO` / `WIP` / `DONE` / `BLOCKED`
 
-採用スタックは [SPEC.md](SPEC.md) を参照（Next.js 15 / TypeScript / Tailwind CSS 4 / shadcn/ui / Vercel）。
+採用スタックは [SPEC.md](SPEC.md) を参照（Next.js 16 / TypeScript / Tailwind CSS 4 / shadcn/ui / Cloudflare Pages）。
 
 ## フェーズ 1: 要件定義
 
@@ -15,7 +15,7 @@
 
 - [x] `DONE` フロントエンドフレームワークの確定（Next.js 15 App Router）
 - [x] `DONE` スタイリング方針の確定（Tailwind CSS 4 + shadcn/ui）
-- [x] `DONE` ホスティング環境の確定（Vercel）
+- [x] `DONE` ホスティング環境の確定（Cloudflare Pages / 静的エクスポート）
 - [x] `DONE` CMS 利用可否の判断（リポジトリ内 MDX + TypeScript データ）
 - [ ] `TODO` ディレクトリ構成・設計方針の確定（`src/app`、`content/` 等）
 - [ ] `TODO` ルーティング方針の確定（動的ルート / ISR 対象の決定）
@@ -52,7 +52,7 @@
 
 ## フェーズ 6: 公開準備
 
-- [ ] `TODO` Vercel プロジェクト作成・GitHub 連携
+- [ ] `TODO` Cloudflare Pages プロジェクト作成・GitHub 連携（ビルドコマンド `pnpm build` / 出力ディレクトリ `out`）
 - [ ] `TODO` 環境変数の整備（Production / Preview / Development）
 - [ ] `TODO` ドメイン取得・設定
 - [ ] `TODO` SEO メタタグ・OGP 設定

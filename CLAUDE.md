@@ -20,7 +20,7 @@ GLOBIS AI Front コミュニティの公式ホームページ。
 - 言語: TypeScript 5
 - スタイリング: Tailwind CSS 4 + shadcn/ui
 - パッケージ管理: pnpm
-- ホスティング: Vercel
+- ホスティング: Cloudflare Pages（静的エクスポート）
 
 ## ディレクトリ構成
 
