@@ -58,27 +58,24 @@ export default function MobileLanding() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "0 22px",
+          padding: "12px 22px",
           borderBottom: "1px solid var(--line-soft)",
         }}
       >
         <a
           href="#"
           aria-label="GLOBIS AI Front"
-          style={{ display: "flex", alignItems: "center", gap: 2 }}
+          style={{ display: "flex", alignItems: "center", gap: 8 }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/gaf_icon.svg"
             alt=""
-            style={{ height: 32, width: "auto", display: "block" }}
+            style={{ height: 26, width: "auto", display: "block" }}
           />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/gaf_logo.svg"
-            alt="GLOBIS AI Front"
-            style={{ height: 20, width: "auto", display: "block" }}
-          />
+          <span className="font-display" style={{ fontSize: 13, fontWeight: 500 }}>
+            GLOBIS AI Front
+          </span>
         </a>
         <div className="mono-label" style={{ fontSize: 9 }}>
           MENU

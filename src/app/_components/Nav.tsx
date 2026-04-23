@@ -19,27 +19,27 @@ export default function Nav() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "0 64px",
+          padding: "14px 64px",
           gap: 40,
         }}
       >
         <a
           href="#"
           aria-label="GLOBIS AI Front"
-          style={{ display: "flex", alignItems: "center", gap: 2 }}
+          style={{ display: "flex", alignItems: "center", gap: 10 }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/gaf_icon.svg"
             alt=""
-            style={{ height: 56, width: "auto", display: "block" }}
+            style={{ height: 44, width: "auto", display: "block" }}
           />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/gaf_logo.svg"
-            alt="GLOBIS AI Front"
-            style={{ height: 36, width: "auto", display: "block" }}
-          />
+          <span
+            className="font-display"
+            style={{ fontSize: 22, fontWeight: 500, letterSpacing: "-0.02em" }}
+          >
+            GLOBIS AI Front
+          </span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
           {NAV_ITEMS.map((label, i) => (
