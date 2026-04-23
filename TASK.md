@@ -13,7 +13,7 @@
 
 ## フェーズ 2: 技術選定・設計
 
-- [x] `DONE` フロントエンドフレームワークの確定（Next.js 15 App Router）
+- [x] `DONE` フロントエンドフレームワークの確定（Next.js 16 App Router）
 - [x] `DONE` スタイリング方針の確定（Tailwind CSS 4 + shadcn/ui）
 - [x] `DONE` ホスティング環境の確定（Cloudflare Pages / 静的エクスポート）
 - [x] `DONE` CMS 利用可否の判断（リポジトリ内 MDX + TypeScript データ）
@@ -41,18 +41,18 @@
 
 ## フェーズ 5: 実装
 
-- [ ] `TODO` 共通コンポーネント実装（Header / Footer / Layout）
-- [ ] `TODO` トップページ実装
+- [x] `DONE` 共通コンポーネント実装（Nav / Footer / MobileLanding を `src/app/_components/` に配置）
+- [x] `DONE` トップページ実装（ClaudeDesign から移植。Hero / WhyNow / WhatIs / WhoJoin / Values / Membership / FAQ / FinalCta / ApplyForm）
 - [ ] `TODO` コミュニティ紹介ページ実装
 - [ ] `TODO` メンバーシップ案内ページ実装
 - [ ] `TODO` 活動・イベント情報ページ実装
-- [ ] `TODO` 問い合わせ / 参加申込フォーム実装
-- [ ] `TODO` レスポンシブ対応
+- [ ] `WIP` 問い合わせ / 参加申込フォーム実装（UI は配置済み。送信先 API / バリデーション / Zod スキーマは未実装）
+- [x] `DONE` レスポンシブ対応（768px ブレークポイントでデスクトップ / モバイル切替）
 - [ ] `TODO` アクセシビリティ対応（WCAG 2.1 AA）
 
 ## フェーズ 6: 公開準備
 
-- [ ] `TODO` Cloudflare Pages プロジェクト作成・GitHub 連携（ビルドコマンド `pnpm build` / 出力ディレクトリ `out`）
+- [x] `DONE` Cloudflare Pages プロジェクト作成・GitHub 連携（`globis-ai-front.pages.dev` に配信。Build command: `pnpm build` / Output: `out`）
 - [ ] `TODO` 環境変数の整備（Production / Preview / Development）
 - [ ] `TODO` ドメイン取得・設定
 - [ ] `TODO` SEO メタタグ・OGP 設定
