@@ -1,4 +1,4 @@
-import ApplyForm from "./_components/ApplyForm";
+// import ApplyForm from "./_components/ApplyForm";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
 import Footer from "./_components/Footer";
@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <div className="desktop-only">
         <Nav />
-        <main>
+        <main style={{ marginTop: -35 }}>
           <Hero />
           <WhyNow />
           <WhatIs />
@@ -25,7 +25,7 @@ export default function Home() {
           <Membership />
           <Faq />
           <FinalCta />
-          <ApplyForm />
+          {/* <ApplyForm /> */}
         </main>
         <Footer />
       </div>

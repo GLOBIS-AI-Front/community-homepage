@@ -47,8 +47,7 @@ export default function Hero() {
           right: 40,
           top: 40,
           bottom: 40,
-          border:
-            "1px solid color-mix(in oklab, var(--fg) 18%, transparent)",
+          border: "1px solid color-mix(in oklab, var(--fg) 18%, transparent)",
           pointerEvents: "none",
           zIndex: 1,
         }}
@@ -82,7 +81,7 @@ export default function Hero() {
             }}
           >
             <div className="eyebrow" style={{ color: "var(--fg)" }}>
-              01 / COHORT MMXXVI
+              AI Community
             </div>
           </div>
 
@@ -166,7 +165,9 @@ export default function Hero() {
                     maxWidth: 420,
                   }}
                 >
-                  GLOBIS発 / AI実装者のためのクローズドコミュニティ。情報だけではなく、実践に接続する人だけのための、静かで強い場所。
+                  GLOBIS発 / AI実践者のためのクローズドコミュニティ。
+                  <br />
+                  情報だけではなく、実践に接続する人だけのための場所。
                 </p>
               </div>
             </div>
@@ -201,22 +202,18 @@ export default function Hero() {
                   padding: "18px 26px",
                   fontSize: 14,
                   backdropFilter: "blur(6px)",
-                  background:
-                    "color-mix(in oklab, var(--bg) 30%, transparent)",
+                  background: "color-mix(in oklab, var(--bg) 30%, transparent)",
                 }}
               >
                 コミュニティを知る
               </a>
             </div>
-            <div
-              style={{ display: "flex", gap: 48, alignItems: "flex-end" }}
-            >
+            <div style={{ display: "flex", gap: 48, alignItems: "flex-end" }}>
               <div>
                 <div
                   className="mono-label"
                   style={{
-                    color:
-                      "color-mix(in oklab, var(--fg) 55%, transparent)",
+                    color: "color-mix(in oklab, var(--fg) 55%, transparent)",
                   }}
                 >
                   MEMBERSHIP
@@ -237,8 +234,7 @@ export default function Hero() {
                 <div
                   className="mono-label"
                   style={{
-                    color:
-                      "color-mix(in oklab, var(--fg) 55%, transparent)",
+                    color: "color-mix(in oklab, var(--fg) 55%, transparent)",
                   }}
                 >
                   STATUS
@@ -259,11 +255,10 @@ export default function Hero() {
                 <div
                   className="mono-label"
                   style={{
-                    color:
-                      "color-mix(in oklab, var(--fg) 55%, transparent)",
+                    color: "color-mix(in oklab, var(--fg) 55%, transparent)",
                   }}
                 >
-                  REF
+                  FOUNDED
                 </div>
                 <div
                   className="font-display"
@@ -275,7 +270,7 @@ export default function Hero() {
                     fontFamily: '"JetBrains Mono",monospace',
                   }}
                 >
-                  GAF · 26.01
+                  2026/04/17
                 </div>
               </div>
             </div>
@@ -318,8 +313,7 @@ export default function Hero() {
               style={{
                 width: 1,
                 height: 40,
-                background:
-                  "color-mix(in oklab, var(--fg) 40%, transparent)",
+                background: "color-mix(in oklab, var(--fg) 40%, transparent)",
               }}
             />
             <div

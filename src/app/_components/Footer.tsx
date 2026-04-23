@@ -26,13 +26,11 @@ export default function Footer() {
               marginBottom: 28,
             }}
           >
-            <div
-              style={{
-                width: 10,
-                height: 10,
-                background: "var(--accent)",
-                borderRadius: "50%",
-              }}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/gaf_icon.svg"
+              alt=""
+              style={{ height: 28, width: "auto", display: "block" }}
             />
             <div
               className="font-display"
