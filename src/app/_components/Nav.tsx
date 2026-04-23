@@ -1,3 +1,5 @@
+import { APPLY_FORM_URL } from "../_constants";
+
 const NAV_ITEMS = ["Why now", "What", "Who", "Values", "Membership", "FAQ"];
 
 export default function Nav() {
@@ -52,7 +54,9 @@ export default function Nav() {
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <a
             className="btn btn-primary"
-            href="#apply"
+            href={APPLY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{ padding: "12px 18px", fontSize: 13 }}
           >
             入会を申し込む <span className="arrow">→</span>

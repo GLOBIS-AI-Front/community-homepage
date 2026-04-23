@@ -1,3 +1,5 @@
+import { APPLY_FORM_URL } from "../_constants";
+
 export default function Hero() {
   return (
     <section
@@ -181,7 +183,9 @@ export default function Hero() {
           >
             <div style={{ display: "flex", gap: 14 }}>
               <a
-                href="#apply"
+                href={APPLY_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary"
                 style={{ padding: "18px 26px", fontSize: 14 }}
               >

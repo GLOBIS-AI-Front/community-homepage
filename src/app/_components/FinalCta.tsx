@@ -1,3 +1,5 @@
+import { APPLY_FORM_URL } from "../_constants";
+
 export default function FinalCta() {
   return (
     <section
@@ -102,7 +104,9 @@ export default function FinalCta() {
           }}
         >
           <a
-            href="#apply"
+            href={APPLY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-primary"
             style={{ padding: "20px 32px", fontSize: 15 }}
           >

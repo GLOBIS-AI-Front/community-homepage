@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { APPLY_FORM_URL } from "../_constants";
+
 const METRICS: [string, string][] = [
   ["情報感度", "高"],
   ["心理的安全性", "高"],
@@ -159,7 +161,9 @@ export default function MobileLanding() {
             }}
           >
             <a
-              href="#apply"
+              href={APPLY_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary"
               style={{
                 fontSize: 12,
@@ -604,7 +608,9 @@ export default function MobileLanding() {
           </span>
         </h2>
         <a
-          href="#apply"
+          href={APPLY_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary"
           style={{
             fontSize: 12,
