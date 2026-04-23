@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: "GLOBIS AI Front",
   description:
     "GLOBIS発、AI実装者のためのクローズドコミュニティ。AI時代、最前線の実践者コミュニティ。",
+  icons: {
+    icon: "/gaf_icon.png",
+  },
 };
 
 export default function RootLayout({
