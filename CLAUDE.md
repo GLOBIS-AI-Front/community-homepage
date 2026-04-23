@@ -14,21 +14,30 @@ GLOBIS AI Front コミュニティの公式ホームページ。
 
 ## 技術スタック
 
-未定（確定次第このセクションを更新する）。
+詳細は [SPEC.md](SPEC.md) の「技術選定」を参照。主要構成は以下:
 
-候補:
-- フロントエンド: Next.js
-- スタイリング: 未定
-- ホスティング: 未定
+- フレームワーク: Next.js 16（App Router / Turbopack）
+- 言語: TypeScript 5
+- スタイリング: Tailwind CSS 4 + shadcn/ui
+- パッケージ管理: pnpm
+- ホスティング: Vercel
 
 ## ディレクトリ構成
 
 ```text
 community-homepage/
-├── README.md   # プロジェクト概要
-├── CLAUDE.md   # 本ファイル（プロジェクト憲法）
-├── SPEC.md     # 仕様書
-└── TASK.md     # タスクリスト
+├── README.md          # プロジェクト概要
+├── CLAUDE.md          # 本ファイル（プロジェクト憲法）
+├── AGENTS.md          # エージェント向け注意事項（Next.js 16）
+├── SPEC.md            # 仕様書
+├── TASK.md            # タスクリスト
+├── src/app/           # App Router エントリ
+├── public/            # 静的アセット
+├── next.config.ts     # Next.js 設定
+├── tsconfig.json      # TypeScript 設定
+├── eslint.config.mjs  # ESLint 設定
+├── postcss.config.mjs # PostCSS 設定（Tailwind）
+└── package.json       # 依存・スクリプト
 ```
 
 ## 関連ドキュメント
