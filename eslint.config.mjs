@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference-only design source from ClaudeDesign (not part of the build).
+    "claude_design/**",
   ]),
 ]);
 
