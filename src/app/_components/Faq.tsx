@@ -5,31 +5,15 @@ import { useState } from "react";
 const ITEMS = [
   {
     q: "コミュニティは完全にクローズドですか？",
-    a: "はい。会員以外への共有・引用は禁止です。Chatham House Rule に準じた情報運用を行います。",
+    a: "はい。会員以外への共有・引用は禁止です。",
   },
   {
-    q: "継続条件はありますか？",
-    a: "四半期ごとにアクティビティを確認します。ギブ実績 / Ship実績 / 共有数のいずれかが水準を下回った場合は個別面談の上、退会をお願いすることがあります。",
-  },
-  {
-    q: "費用感はどの程度ですか？",
-    a: "運営費に限定した実費ベースです。詳細はお申込みフォーム送信後、審査通過時にお伝えします。情報商材的な高額課金は一切ありません。",
+    q: "費用はかかりますか？",
+    a: "いいえ。参加費無料のコミュニティです。",
   },
   {
     q: "GLOBIS生でないと入れませんか？",
-    a: "はい、現時点では在学・修了を含む GLOBIS 生が必須条件です。将来的な拡張は検討中ですが、当面はクローズドで運用します。",
-  },
-  {
-    q: "業種・職種の偏りはありますか？",
-    a: "経営者・事業オーナー・AI推進担当・ヘビーユーザーを核に、業種は分散しています。重要なのは属性ではなく、実装と数字に向き合っているかです。",
-  },
-  {
-    q: "オフライン集まりはありますか？",
-    a: "定期的に都内でオフラインセッション / デモデイを開催します。希望者のみ参加可。コアはオンラインで回ります。",
-  },
-  {
-    q: "匿名参加は可能ですか？",
-    a: "不可です。実名・所属の開示が前提となります。",
+    a: "はい、現時点では在学・修了を含む GLOBIS 生が必須条件です。",
   },
 ];
 
@@ -37,7 +21,12 @@ export default function Faq() {
   const [open, setOpen] = useState<number>(0);
 
   return (
-    <section className="section" id="s5">
+    <section
+      className="section"
+      id="s5"
+      data-theme="light"
+      style={{ background: "var(--bg)", color: "var(--fg)" }}
+    >
       <div className="section-head">
         <div className="section-idx">— 06 / FAQ</div>
         <div>
@@ -54,7 +43,7 @@ export default function Faq() {
               maxWidth: 1100,
             }}
           >
-            Frequently asked.
+            FAQ<span style={{ color: "var(--accent)" }}>.</span>
           </h2>
         </div>
       </div>

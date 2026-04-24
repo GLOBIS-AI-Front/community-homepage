@@ -54,8 +54,7 @@ const FAQS: [string, string][] = [
     "コミュニティは完全にクローズドですか？",
     "はい。会員以外への共有・引用は禁止です。",
   ],
-  ["継続条件はありますか？", "四半期ごとにアクティビティを確認します。"],
-  ["費用感はどの程度ですか？", "運営費に限定した実費ベースです。"],
+  ["費用はかかりますか？", "いいえ。参加費無料のコミュニティです。"],
   ["GLOBIS生でないと入れませんか？", "はい、GLOBIS 生が必須条件です。"],
 ];
 
@@ -556,8 +555,11 @@ export default function MobileLanding() {
         style={{
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
+          background: "var(--bg)",
+          color: "var(--fg)",
         }}
         id="s5"
+        data-theme="light"
       >
         <div className="section-idx">— 06 / FAQ</div>
         <h2
@@ -571,7 +573,7 @@ export default function MobileLanding() {
             marginBottom: 28,
           }}
         >
-          Frequently asked.
+          FAQ.
         </h2>
         {FAQS.map((it, i) => {
           const isOpen = open === i;
