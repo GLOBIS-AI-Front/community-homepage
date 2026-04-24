@@ -30,10 +30,10 @@ const PILLARS = [
 
 const FIT = ["経営者", "事業オーナー", "AI推進担当", "AIヘビーユーザー"];
 const NOT_FIT = [
-  "情報商材マインド",
   "ROM専",
   "受け身の学習者",
-  "未着手フェーズ",
+  "未実装",
+  "情報商材マインド",
 ];
 
 const VALUES: [string, string][] = [
@@ -355,8 +355,11 @@ export default function MobileLanding() {
         style={{
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
+          background: "var(--bg)",
+          color: "var(--fg)",
         }}
         id="s2"
+        data-theme="light"
       >
         <div className="section-idx">— 03 / WHO</div>
         <h2
@@ -372,10 +375,10 @@ export default function MobileLanding() {
         >
           この場所が
           <br />
-          向いている人.
+          向いている人。
         </h2>
         <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
-          / FIT
+          FIT
         </div>
         {FIT.map((x, i) => (
           <div
@@ -404,9 +407,9 @@ export default function MobileLanding() {
             color: "var(--danger)",
           }}
         >
-          / NOT FIT
+          NOT FIT
         </div>
-        {NOT_FIT.map((x) => (
+        {NOT_FIT.map((x, i) => (
           <div
             key={x}
             style={{
@@ -426,7 +429,7 @@ export default function MobileLanding() {
               className="mono-label"
               style={{ fontSize: 10, color: "var(--danger)" }}
             >
-              ×
+              0{i + 1}
             </span>
           </div>
         ))}

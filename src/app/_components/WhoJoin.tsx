@@ -6,15 +6,20 @@ const FIT = [
 ];
 
 const NOT_FIT = [
-  { k: "情報商材マインド", d: "「AIで月100万」「誰でも簡単」を語る層。" },
   { k: "ROM専", d: "受け取るだけで、自らは何も出さない姿勢。" },
   { k: "受け身の学習者", d: "実装より理解優先。手を動かさない人。" },
-  { k: "未着手フェーズ", d: "まだ自社業務にAIを差し込んだことがない。" },
+  { k: "未実装", d: "まだ自社業務にAIを差し込んだことがない。" },
+  { k: "情報商材マインド", d: "「AIで月100万」「誰でも簡単」を語る層。" },
 ];
 
 export default function WhoJoin() {
   return (
-    <section className="section" id="s2">
+    <section
+      className="section"
+      id="s2"
+      data-theme="light"
+      style={{ background: "var(--bg)", color: "var(--fg)" }}
+    >
       <div className="section-head">
         <div className="section-idx">— 03 / WHO</div>
         <div>
@@ -30,7 +35,7 @@ export default function WhoJoin() {
           >
             この場所が
             <br />
-            向いている人<span style={{ color: "var(--accent)" }}>.</span>
+            向いている人<span style={{ color: "var(--accent)" }}>。</span>
           </h2>
         </div>
       </div>
@@ -38,7 +43,7 @@ export default function WhoJoin() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72 }}>
         <div>
           <div className="mono-label" style={{ marginBottom: 28 }}>
-            / FIT — 相応しい
+            FIT
           </div>
           <div style={{ borderTop: "1px solid var(--line)" }}>
             {FIT.map((r, i) => (
@@ -50,7 +55,8 @@ export default function WhoJoin() {
                   gap: 24,
                   padding: "28px 0",
                   borderBottom: "1px solid var(--line)",
-                  alignItems: "baseline",
+                  alignItems: "center",
+                  minHeight: 96,
                 }}
               >
                 <div className="mono-label">0{i + 1}</div>
@@ -82,10 +88,10 @@ export default function WhoJoin() {
             className="mono-label"
             style={{ marginBottom: 28, color: "var(--danger)" }}
           >
-            / NOT FIT — 向いていない
+            NOT FIT
           </div>
           <div style={{ borderTop: "1px solid var(--line)" }}>
-            {NOT_FIT.map((r) => (
+            {NOT_FIT.map((r, i) => (
               <div
                 key={r.k}
                 style={{
@@ -94,11 +100,12 @@ export default function WhoJoin() {
                   gap: 24,
                   padding: "28px 0",
                   borderBottom: "1px solid var(--line)",
-                  alignItems: "baseline",
+                  alignItems: "center",
+                  minHeight: 96,
                 }}
               >
                 <div className="mono-label" style={{ color: "var(--danger)" }}>
-                  ×
+                  0{i + 1}
                 </div>
                 <div
                   className="font-display font-jp"
