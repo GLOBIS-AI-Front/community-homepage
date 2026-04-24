@@ -15,9 +15,27 @@ const ROWS: Row[] = [
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
         <circle cx="20" cy="20" r="3" fill="var(--accent)" />
-        <circle cx="20" cy="20" r="9" stroke="var(--accent)" strokeOpacity=".7" />
-        <circle cx="20" cy="20" r="15" stroke="var(--accent)" strokeOpacity=".35" />
-        <circle cx="20" cy="20" r="19" stroke="var(--accent)" strokeOpacity=".15" />
+        <circle
+          cx="20"
+          cy="20"
+          r="9"
+          stroke="var(--accent)"
+          strokeOpacity=".7"
+        />
+        <circle
+          cx="20"
+          cy="20"
+          r="15"
+          stroke="var(--accent)"
+          strokeOpacity=".35"
+        />
+        <circle
+          cx="20"
+          cy="20"
+          r="19"
+          stroke="var(--accent)"
+          strokeOpacity=".15"
+        />
       </svg>
     ),
   },
@@ -53,10 +71,38 @@ const ROWS: Row[] = [
     d: "ツールもテンプレートも揃い、最初の一歩は軽い。",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="26" width="6" height="10" fill="var(--accent)" opacity=".9" />
-        <rect x="13" y="20" width="6" height="16" fill="var(--accent)" opacity=".45" />
-        <rect x="22" y="14" width="6" height="22" fill="var(--accent)" opacity=".22" />
-        <rect x="31" y="8" width="6" height="28" fill="var(--accent)" opacity=".1" />
+        <rect
+          x="4"
+          y="26"
+          width="6"
+          height="10"
+          fill="var(--accent)"
+          opacity=".9"
+        />
+        <rect
+          x="13"
+          y="20"
+          width="6"
+          height="16"
+          fill="var(--accent)"
+          opacity=".45"
+        />
+        <rect
+          x="22"
+          y="14"
+          width="6"
+          height="22"
+          fill="var(--accent)"
+          opacity=".22"
+        />
+        <rect
+          x="31"
+          y="8"
+          width="6"
+          height="28"
+          fill="var(--accent)"
+          opacity=".1"
+        />
       </svg>
     ),
   },
@@ -82,8 +128,7 @@ export default function WhyNow() {
           >
             「情報収集」で
             <br />
-            止まっていないか
-            <span style={{ color: "var(--accent)" }}>.</span>
+            止まっていないか。
           </h2>
         </div>
       </div>
@@ -117,19 +162,20 @@ export default function WhyNow() {
               maxWidth: 620,
             }}
           >
-            事業の現場では、誰もがGPTを開き、誰もがClaudeに質問している。それでも「稼ぐ武器」として組み込めている人は、ごく一部でしかない。情報交換の場は豊富にある一方で、実装と収益に接続する場は、驚くほど少ない。
+            事業の現場では、誰もがAI質問している。それでも「成長の武器」として組み込めている人は、ごく一部でしかない。情報交換の場は豊富にある一方で、実践に接続する場は驚くほど少ない。
           </p>
         </div>
       </div>
 
       <div style={{ marginTop: 96 }}>
-        <div className="hair" style={{ marginBottom: 36 }} />
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: 0,
+            borderTop: "1px solid var(--line)",
             borderLeft: "1px solid var(--line)",
+            borderBottom: "1px solid var(--line)",
           }}
         >
           {ROWS.map((r, i) => (

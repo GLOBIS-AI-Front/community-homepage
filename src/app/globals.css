@@ -14,15 +14,16 @@
   --danger: #c86b5f;
 }
 
-:root[data-theme="light"] {
+/* Scoped light theme — apply via `data-theme="light"` on any element. */
+[data-theme="light"] {
   --bg: #f5f2ec;
   --bg-elev: #efebe2;
   --bg-soft: #e8e4da;
   --fg: #0b0b0f;
-  --fg-dim: #3d3a34;
-  --fg-mute: #8b8b83;
-  --line: #d9d4c8;
-  --line-soft: #e3ded2;
+  --fg-dim: #2a2620;
+  --fg-mute: #555048;
+  --line: #c2bdb0;
+  --line-soft: #d9d4c8;
   --accent: #0b0b0f;
   --danger: #8b3a2e;
 }

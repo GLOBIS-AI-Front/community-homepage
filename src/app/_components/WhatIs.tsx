@@ -10,12 +10,12 @@ function Pillar({ idx, en, jp, body, icon }: PillarProps) {
   return (
     <div
       style={{
-        padding: "48px 36px",
+        padding: "48px 36px 32px",
         borderRight: "1px solid var(--line)",
         display: "flex",
         flexDirection: "column",
         gap: 20,
-        minHeight: 420,
+        minHeight: 320,
         position: "relative",
         overflow: "hidden",
       }}
@@ -42,14 +42,16 @@ function Pillar({ idx, en, jp, body, icon }: PillarProps) {
 
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          position: "relative",
+          position: "absolute",
+          top: 24,
+          right: 24,
+          zIndex: 1,
         }}
       >
-        <div className="mono-label">0{idx} / 03</div>
         {icon}
+      </div>
+      <div style={{ position: "relative" }}>
+        <div className="mono-label">0{idx} / 03</div>
       </div>
       <div style={{ marginTop: 40, position: "relative" }}>
         <div
@@ -92,7 +94,12 @@ function Pillar({ idx, en, jp, body, icon }: PillarProps) {
 
 export default function WhatIs() {
   return (
-    <section className="section" id="s1">
+    <section
+      className="section"
+      id="s1"
+      data-theme="light"
+      style={{ background: "var(--bg)", color: "var(--fg)" }}
+    >
       <div className="section-head">
         <div className="section-idx">— 02 / WHAT IS IT</div>
         <div>
@@ -109,9 +116,9 @@ export default function WhatIs() {
               maxWidth: 1100,
             }}
           >
-            先頭に立つ人たちの、
+            答えのない先端を、
             <br />
-            静かな集団.
+            全力で楽しめる集団。
           </h2>
           <p
             className="font-jp"
@@ -124,8 +131,8 @@ export default function WhatIs() {
               maxWidth: 720,
             }}
           >
-            「先端 / 先陣 /
-            先頭」 — AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実装と収益の知見を持ち寄る場所。
+            「先端 / 先陣 / 先頭」 —
+            AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実践と実装の知見を持ち寄る場所。
           </p>
         </div>
       </div>
@@ -134,6 +141,7 @@ export default function WhatIs() {
         style={{
           borderTop: "1px solid var(--line)",
           borderLeft: "1px solid var(--line)",
+          borderBottom: "1px solid var(--line)",
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
         }}
@@ -142,10 +150,16 @@ export default function WhatIs() {
           idx="1"
           en="FRONT"
           jp="先端を走る"
-          body="研究・実務の両輪で、国内外の最新を最短で実装にまで落とす。机上ではなく、動いているものに向き合う。"
+          body="研究・実務の両輪で、国内外の最新を最短で実装にまで落とす。空論ではなく、動いているものに向き合う。"
           icon={
             <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
-              <circle cx="44" cy="44" r="42" stroke="var(--line)" strokeDasharray="1 3" />
+              <circle
+                cx="44"
+                cy="44"
+                r="42"
+                stroke="var(--line)"
+                strokeDasharray="1 3"
+              />
               <circle cx="44" cy="44" r="30" stroke="var(--line)" />
               <circle
                 cx="44"
@@ -153,7 +167,14 @@ export default function WhatIs() {
                 r="18"
                 stroke="color-mix(in oklab, var(--fg) 30%, transparent)"
               />
-              <line x1="44" y1="6" x2="44" y2="18" stroke="var(--accent)" strokeWidth="1.5" />
+              <line
+                x1="44"
+                y1="6"
+                x2="44"
+                y2="18"
+                stroke="var(--accent)"
+                strokeWidth="1.5"
+              />
               <line
                 x1="44"
                 y1="70"
@@ -176,7 +197,14 @@ export default function WhatIs() {
                 stroke="color-mix(in oklab, var(--fg) 25%, transparent)"
               />
               <path d="M44 20 L50 44 L44 48 L38 44 Z" fill="var(--accent)" />
-              <circle cx="44" cy="44" r="3" fill="var(--bg)" stroke="var(--fg)" strokeWidth="1.2" />
+              <circle
+                cx="44"
+                cy="44"
+                r="3"
+                fill="var(--bg)"
+                stroke="var(--fg)"
+                strokeWidth="1.2"
+              />
               <circle cx="74" cy="18" r="2.2" fill="var(--accent)" />
             </svg>
           }
@@ -185,7 +213,7 @@ export default function WhatIs() {
           idx="2"
           en="GIVE FIRST"
           jp="ギブ先行"
-          body="奪う前に渡す。実務で得た知見・プロンプト・仕組みを、まず自分から開示する者だけが残る。"
+          body="奪う前に渡す。実務で得た知見・知識・仕組みを、まず自分から開示する者を評価する。"
           icon={
             <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
               <circle cx="44" cy="44" r="42" stroke="var(--line)" />
@@ -199,9 +227,30 @@ export default function WhatIs() {
                 stroke="color-mix(in oklab, var(--fg) 12%, transparent)"
                 strokeWidth="1"
               />
-              <circle cx="28" cy="50" r="6" stroke="var(--fg)" strokeWidth="1.3" fill="var(--bg)" />
-              <circle cx="60" cy="50" r="6" stroke="var(--fg)" strokeWidth="1.3" fill="var(--bg)" />
-              <line x1="34" y1="50" x2="52" y2="50" stroke="var(--accent)" strokeWidth="1.6" />
+              <circle
+                cx="28"
+                cy="50"
+                r="6"
+                stroke="var(--fg)"
+                strokeWidth="1.3"
+                fill="var(--bg)"
+              />
+              <circle
+                cx="60"
+                cy="50"
+                r="6"
+                stroke="var(--fg)"
+                strokeWidth="1.3"
+                fill="var(--bg)"
+              />
+              <line
+                x1="34"
+                y1="50"
+                x2="52"
+                y2="50"
+                stroke="var(--accent)"
+                strokeWidth="1.6"
+              />
               <path
                 d="M48 46 L54 50 L48 54"
                 stroke="var(--accent)"
@@ -233,12 +282,39 @@ export default function WhatIs() {
               <line x1="6" y1="63" x2="82" y2="63" stroke="var(--line)" />
               <line x1="25" y1="6" x2="25" y2="82" stroke="var(--line)" />
               <line x1="63" y1="6" x2="63" y2="82" stroke="var(--line)" />
-              <rect x="16" y="56" width="8" height="14" fill="var(--accent)" opacity=".35" />
-              <rect x="32" y="46" width="8" height="24" fill="var(--accent)" opacity=".6" />
-              <rect x="48" y="34" width="8" height="36" fill="var(--accent)" opacity=".85" />
+              <rect
+                x="16"
+                y="56"
+                width="8"
+                height="14"
+                fill="var(--accent)"
+                opacity=".35"
+              />
+              <rect
+                x="32"
+                y="46"
+                width="8"
+                height="24"
+                fill="var(--accent)"
+                opacity=".6"
+              />
+              <rect
+                x="48"
+                y="34"
+                width="8"
+                height="36"
+                fill="var(--accent)"
+                opacity=".85"
+              />
               <rect x="64" y="20" width="8" height="50" fill="var(--accent)" />
               <circle cx="68" cy="16" r="3" fill="var(--accent)" />
-              <circle cx="68" cy="16" r="6" stroke="var(--accent)" strokeOpacity=".4" />
+              <circle
+                cx="68"
+                cy="16"
+                r="6"
+                stroke="var(--accent)"
+                strokeOpacity=".4"
+              />
             </svg>
           }
         />

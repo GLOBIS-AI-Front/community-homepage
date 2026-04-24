@@ -11,13 +11,30 @@ const METRICS: [string, string][] = [
 ];
 
 const PILLARS = [
-  { en: "FRONT", jp: "先端を走る", d: "机上でなく、動いているものに向き合う。" },
-  { en: "GIVE FIRST", jp: "ギブ先行", d: "奪う前に渡す。開示する者だけが残る。" },
-  { en: "SHIP OVER STUDY", jp: "実装主義", d: "学びの正解より、動くプロトタイプ。" },
+  {
+    en: "FRONT",
+    jp: "先端を走る",
+    d: "研究・実務の両輪で、国内外の最新を最短で実装にまで落とす。机上ではなく、動いているものに向き合う。",
+  },
+  {
+    en: "GIVE FIRST",
+    jp: "ギブ先行",
+    d: "奪う前に渡す。実務で得た知見・プロンプト・仕組みを、まず自分から開示する者だけが残る。",
+  },
+  {
+    en: "SHIP OVER STUDY",
+    jp: "実装主義",
+    d: "学びの正解より、動くプロトタイプ。失敗とコード、数字と顧客の反応だけが通貨になる。",
+  },
 ];
 
 const FIT = ["経営者", "事業オーナー", "AI推進担当", "AIヘビーユーザー"];
-const NOT_FIT = ["情報商材マインド", "ROM専", "受け身の学習者", "未着手フェーズ"];
+const NOT_FIT = [
+  "情報商材マインド",
+  "ROM専",
+  "受け身の学習者",
+  "未着手フェーズ",
+];
 
 const VALUES: [string, string][] = [
   ["Give First", "まずは自分から与える"],
@@ -34,7 +51,10 @@ const STEPS: [string, string][] = [
 ];
 
 const FAQS: [string, string][] = [
-  ["コミュニティは完全にクローズドですか？", "はい。会員以外への共有・引用は禁止です。"],
+  [
+    "コミュニティは完全にクローズドですか？",
+    "はい。会員以外への共有・引用は禁止です。",
+  ],
   ["継続条件はありますか？", "四半期ごとにアクティビティを確認します。"],
   ["費用感はどの程度ですか？", "運営費に限定した実費ベースです。"],
   ["GLOBIS生でないと入れませんか？", "はい、GLOBIS 生が必須条件です。"],
@@ -73,7 +93,10 @@ export default function MobileLanding() {
             alt=""
             style={{ height: 26, width: "auto", display: "block" }}
           />
-          <span className="font-display" style={{ fontSize: 13, fontWeight: 500 }}>
+          <span
+            className="font-display"
+            style={{ fontSize: 13, fontWeight: 500 }}
+          >
             GLOBIS AI Front
           </span>
         </a>
@@ -258,10 +281,16 @@ export default function MobileLanding() {
         style={{
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
+          background: "var(--bg)",
+          color: "var(--fg)",
         }}
         id="s1"
+        data-theme="light"
       >
         <div className="section-idx">— 02 / WHAT IS IT</div>
+        <div className="eyebrow" style={{ marginTop: 16 }}>
+          GLOBIS AI FRONT
+        </div>
         <h2
           className="font-display font-jp"
           style={{
@@ -269,20 +298,36 @@ export default function MobileLanding() {
             fontWeight: 500,
             letterSpacing: "-0.02em",
             lineHeight: 1.12,
-            marginTop: 20,
+            marginTop: 16,
           }}
         >
           先頭に立つ人たちの、
           <br />
-          静かな集団.
+          静かな集団
         </h2>
+        <p
+          className="font-jp"
+          style={{
+            marginTop: 18,
+            fontSize: 13,
+            lineHeight: 1.9,
+            fontWeight: 300,
+            color: "var(--fg-dim)",
+          }}
+        >
+          「先端 / 先陣 / 先頭」 —
+          AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実践と実装の知見を持ち寄る場所。
+        </p>
         <div style={{ marginTop: 32 }}>
           {PILLARS.map((p, i) => (
             <div
               key={p.en}
               style={{ padding: "20px 0", borderTop: "1px solid var(--line)" }}
             >
-              <div className="mono-label" style={{ fontSize: 10, marginBottom: 8 }}>
+              <div
+                className="mono-label"
+                style={{ fontSize: 10, marginBottom: 8 }}
+              >
                 0{i + 1} · {p.en}
               </div>
               <div
@@ -547,7 +592,10 @@ export default function MobileLanding() {
                   cursor: "pointer",
                 }}
               >
-                <span className="font-jp" style={{ fontSize: 13, fontWeight: 500 }}>
+                <span
+                  className="font-jp"
+                  style={{ fontSize: 13, fontWeight: 500 }}
+                >
                   {it[0]}
                 </span>
                 <span
@@ -606,7 +654,9 @@ export default function MobileLanding() {
           <br />
           <span style={{ fontStyle: "italic", fontWeight: 300 }}>
             ギブしに来てください
-            <span style={{ color: "var(--accent)", fontStyle: "normal" }}>.</span>
+            <span style={{ color: "var(--accent)", fontStyle: "normal" }}>
+              .
+            </span>
           </span>
         </h2>
         <a
@@ -649,7 +699,10 @@ export default function MobileLanding() {
               borderRadius: "50%",
             }}
           />
-          <div className="font-display" style={{ fontSize: 13, fontWeight: 500 }}>
+          <div
+            className="font-display"
+            style={{ fontSize: 13, fontWeight: 500 }}
+          >
             GLOBIS AI Front
           </div>
         </div>
