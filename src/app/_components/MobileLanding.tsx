@@ -455,9 +455,9 @@ export default function MobileLanding() {
             marginBottom: 28,
           }}
         >
-          Four rules of
+          実践者の、
           <br />
-          the operator.
+          4つの原則。
         </h2>
         {VALUES.map((v, i) => (
           <div

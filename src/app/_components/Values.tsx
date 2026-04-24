@@ -46,9 +46,9 @@ export default function Values() {
               maxWidth: 1100,
             }}
           >
-            Four rules of
+            実践者の、
             <br />
-            the operator<span style={{ color: "var(--accent)" }}>.</span>
+            4つの原則<span style={{ color: "var(--accent)" }}>。</span>
           </h2>
         </div>
       </div>
@@ -61,11 +61,11 @@ export default function Values() {
             onMouseLeave={() => setHover(null)}
             style={{
               display: "grid",
-              gridTemplateColumns: "80px 260px 1fr 1fr",
+              gridTemplateColumns: "80px 340px 1fr 1fr",
               gap: 32,
               padding: "36px 0 40px",
               borderBottom: "1px solid var(--line)",
-              alignItems: "baseline",
+              alignItems: "center",
               cursor: "default",
               transition: "all .4s ease",
               background:
@@ -86,6 +86,7 @@ export default function Values() {
                 color: "var(--fg)",
                 transition: "color .3s",
                 fontStyle: hover === i ? "italic" : "normal",
+                whiteSpace: "nowrap",
               }}
             >
               {v.en}
