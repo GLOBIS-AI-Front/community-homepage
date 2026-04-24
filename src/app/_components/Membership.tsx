@@ -3,36 +3,28 @@
 import { useState } from "react";
 
 const MUST = [
-  { t: "GLOBIS生", d: "在学・修了を問わず、GLOBIS生コミュニティに属していること。" },
-  { t: "実績アンケート", d: "AI実装の現在地を事実ベースで開示できること。" },
-  { t: "使用実態", d: "週単位で AI を業務に投入していること。" },
+  { t: "GLOBIS生", d: "GLOBISの在校生・卒業生であること。" },
+  { t: "AI使用実績", d: "AIを業務で活用していること。" },
   { t: "文化適合", d: "ギブ先行・受け身拒否のカルチャーに共鳴すること。" },
-  { t: "審査通過", d: "運営による最終判断を経ること。" },
 ];
 
 const STEPS = [
   {
     n: "01",
-    t: "応募フォーム送信",
-    d: "実績・使用実態・動機を記述。フォームは通常15〜20分。",
+    t: "申し込みフォーム送信",
+    d: "「入会を申し込む」からフォームに回答。",
     tag: "APPLY",
   },
   {
     n: "02",
-    t: "実績アンケート",
-    d: "AI活用の現状・運用しているプロダクト・数字を詳細に共有。",
-    tag: "SCREEN",
-  },
-  {
-    n: "03",
-    t: "文化適合の審査",
-    d: "運営による書類審査とライトな面談。ギブ文化との整合を確認。",
+    t: "運営による確認",
+    d: "運営による審査。",
     tag: "REVIEW",
   },
   {
-    n: "04",
-    t: "オンボーディング",
-    d: "Discord招待 / 初回ギブセッション / 初回Ship課題のアサイン。",
+    n: "03",
+    t: "Discord招待",
+    d: "コミュニティDiscordサーバーへ招待。",
     tag: "ONBOARD",
   },
 ];
@@ -41,7 +33,12 @@ export default function Membership() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="section" id="s4">
+    <section
+      className="section"
+      id="s4"
+      data-theme="light"
+      style={{ background: "var(--bg)", color: "var(--fg)" }}
+    >
       <div className="section-head">
         <div className="section-idx">— 05 / MEMBERSHIP</div>
         <div>
@@ -58,9 +55,9 @@ export default function Membership() {
               maxWidth: 1100,
             }}
           >
-            審査を通過した人だけが、
+            応募から入会までの、
             <br />
-            入口を開ける<span style={{ color: "var(--accent)" }}>.</span>
+            4ステップ<span style={{ color: "var(--accent)" }}>。</span>
           </h2>
         </div>
       </div>
@@ -73,7 +70,7 @@ export default function Membership() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 0,
             border: "1px solid var(--line)",
           }}
@@ -83,7 +80,7 @@ export default function Membership() {
               key={r.t}
               style={{
                 padding: "24px 20px 28px",
-                borderRight: i < 4 ? "1px solid var(--line)" : "none",
+                borderRight: i < 2 ? "1px solid var(--line)" : "none",
               }}
             >
               <div className="mono-label" style={{ marginBottom: 10 }}>
@@ -118,7 +115,7 @@ export default function Membership() {
           style={{
             position: "relative",
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 0,
           }}
         >
@@ -126,8 +123,8 @@ export default function Membership() {
             style={{
               position: "absolute",
               top: 18,
-              left: "12.5%",
-              right: "12.5%",
+              left: "16.67%",
+              right: "16.67%",
               height: 1,
               background: "var(--line)",
             }}
@@ -136,10 +133,10 @@ export default function Membership() {
             style={{
               position: "absolute",
               top: 18,
-              left: "12.5%",
+              left: "16.67%",
               height: 1,
               background: "var(--accent)",
-              width: `${(active / 3) * 75}%`,
+              width: `${(active / 2) * 66.66}%`,
               transition: "width .5s ease",
             }}
           />
@@ -150,8 +147,7 @@ export default function Membership() {
               style={{
                 position: "relative",
                 paddingTop: 48,
-                textAlign: "left",
-                paddingRight: 32,
+                textAlign: "center",
                 cursor: "pointer",
               }}
             >
@@ -159,7 +155,8 @@ export default function Membership() {
                 style={{
                   position: "absolute",
                   top: 12,
-                  left: 0,
+                  left: "50%",
+                  transform: "translateX(-50%)",
                   width: 14,
                   height: 14,
                   borderRadius: "50%",
@@ -190,6 +187,8 @@ export default function Membership() {
                   color: "var(--fg-dim)",
                   lineHeight: 1.7,
                   maxWidth: 260,
+                  marginLeft: "auto",
+                  marginRight: "auto",
                 }}
               >
                 {s.d}

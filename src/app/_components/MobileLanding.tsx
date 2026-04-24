@@ -44,10 +44,9 @@ const VALUES: [string, string][] = [
 ];
 
 const STEPS: [string, string][] = [
-  ["01", "応募フォーム送信"],
-  ["02", "実績アンケート"],
-  ["03", "文化適合の審査"],
-  ["04", "オンボーディング"],
+  ["01", "申し込みフォーム送信"],
+  ["02", "運営による確認"],
+  ["03", "Discord招待"],
 ];
 
 const FAQS: [string, string][] = [
@@ -499,8 +498,11 @@ export default function MobileLanding() {
         style={{
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
+          background: "var(--bg)",
+          color: "var(--fg)",
         }}
         id="s4"
+        data-theme="light"
       >
         <div className="section-idx">— 05 / MEMBERSHIP</div>
         <h2
@@ -514,7 +516,7 @@ export default function MobileLanding() {
             marginBottom: 28,
           }}
         >
-          審査を通過した人だけが、入口を開ける.
+          応募から入会までの、4ステップ。
         </h2>
         <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
           FLOW
