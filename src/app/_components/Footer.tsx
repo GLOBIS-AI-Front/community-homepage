@@ -83,9 +83,6 @@ export default function Footer() {
             <br />
             クローズドコミュニティ。
           </p>
-          <div className="mono-label" style={{ marginTop: 40 }}>
-            MMXXVI · COHORT 01 · 60°12′N
-          </div>
         </div>
         {COLUMNS.map((c) => (
           <div key={c.h}>

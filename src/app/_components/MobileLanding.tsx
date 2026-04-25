@@ -970,30 +970,15 @@ export default function MobileLanding() {
         }}
       >
         <div
+          className="font-display"
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
+            fontSize: 13,
+            fontWeight: 500,
+            textAlign: "center",
             marginBottom: 14,
           }}
         >
-          <div
-            style={{
-              width: 6,
-              height: 6,
-              background: "var(--accent)",
-              borderRadius: "50%",
-            }}
-          />
-          <div
-            className="font-display"
-            style={{ fontSize: 13, fontWeight: 500 }}
-          >
-            GLOBIS AI Front
-          </div>
-        </div>
-        <div className="mono-label" style={{ fontSize: 9, marginTop: 14 }}>
-          © 2026 · COHORT 01 · 60°12′N
+          GLOBIS AI Front
         </div>
       </div>
     </div>
