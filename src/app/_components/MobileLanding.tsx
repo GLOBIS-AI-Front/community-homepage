@@ -31,12 +31,7 @@ const PILLARS = [
 ];
 
 const FIT = ["経営者", "事業オーナー", "AI推進担当", "AIヘビーユーザー"];
-const NOT_FIT = [
-  "ROM専",
-  "受け身の学習者",
-  "未実装",
-  "情報商材マインド",
-];
+const NOT_FIT = ["ROM専", "受け身の学習者", "未実装", "情報商材マインド"];
 
 const VALUES: [string, string][] = [
   ["Give First", "まずは自分から与える"],
@@ -224,59 +219,59 @@ export default function MobileLanding() {
         id="s0"
       >
         <Reveal>
-        <div className="section-idx">— 01 / WHY NOW</div>
-        <h2
-          className="font-display font-jp"
-          style={{
-            fontSize: 36,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.1,
-            marginTop: 20,
-          }}
-        >
-          「情報収集」で
-          <br />
-          止まっていないか
-          <span style={{ color: "var(--accent)" }}>.</span>
-        </h2>
-        <p
-          className="font-jp"
-          style={{
-            fontSize: 13,
-            lineHeight: 1.85,
-            color: "var(--fg-dim)",
-            marginTop: 20,
-          }}
-        >
-          情報交換の場は豊富にある一方で、実装と収益に接続する場は、驚くほど少ない。
-        </p>
+          <div className="section-idx">— 01 / WHY NOW</div>
+          <h2
+            className="font-display font-jp"
+            style={{
+              fontSize: 36,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.1,
+              marginTop: 20,
+            }}
+          >
+            「情報収集」で
+            <br />
+            止まっていないか
+            <span style={{ color: "var(--accent)" }}>.</span>
+          </h2>
+          <p
+            className="font-jp"
+            style={{
+              fontSize: 13,
+              lineHeight: 1.85,
+              color: "var(--fg-dim)",
+              marginTop: 20,
+            }}
+          >
+            情報交換の場は豊富にある一方で、実装と収益に接続する場は、驚くほど少ない。
+          </p>
         </Reveal>
         <Reveal>
-        <div style={{ marginTop: 28, borderTop: "1px solid var(--line)" }}>
-          {METRICS.map((r, i) => (
-            <div
-              key={r[0]}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                padding: "14px 0",
-                borderBottom: "1px solid var(--line-soft)",
-                alignItems: "center",
-              }}
-            >
-              <span className="mono-label" style={{ fontSize: 10 }}>
-                0{i + 1} · {r[0]}
-              </span>
-              <span
-                className="font-display"
-                style={{ fontSize: 22, color: "var(--accent)" }}
+          <div style={{ marginTop: 28, borderTop: "1px solid var(--line)" }}>
+            {METRICS.map((r, i) => (
+              <div
+                key={r[0]}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr auto",
+                  padding: "14px 0",
+                  borderBottom: "1px solid var(--line-soft)",
+                  alignItems: "center",
+                }}
               >
-                {r[1]}
-              </span>
-            </div>
-          ))}
-        </div>
+                <span className="mono-label" style={{ fontSize: 10 }}>
+                  0{i + 1} · {r[0]}
+                </span>
+                <span
+                  className="font-display"
+                  style={{ fontSize: 22, color: "var(--accent)" }}
+                >
+                  {r[1]}
+                </span>
+              </div>
+            ))}
+          </div>
         </Reveal>
       </div>
 
@@ -292,69 +287,72 @@ export default function MobileLanding() {
         data-theme="light"
       >
         <Reveal>
-        <div className="section-idx">— 02 / WHAT IS IT</div>
-        <div className="eyebrow" style={{ marginTop: 16 }}>
-          GLOBIS AI FRONT
-        </div>
-        <h2
-          className="font-display font-jp"
-          style={{
-            fontSize: 34,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.12,
-            marginTop: 16,
-          }}
-        >
-          先頭に立つ人たちの、
-          <br />
-          静かな集団
-        </h2>
-        <p
-          className="font-jp"
-          style={{
-            marginTop: 18,
-            fontSize: 13,
-            lineHeight: 1.9,
-            fontWeight: 300,
-            color: "var(--fg-dim)",
-          }}
-        >
-          「先端 / 先陣 / 先頭」 —
-          AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実践と実装の知見を持ち寄る場所。
-        </p>
+          <div className="section-idx">— 02 / WHAT IS IT</div>
+          <div className="eyebrow" style={{ marginTop: 16 }}>
+            GLOBIS AI FRONT
+          </div>
+          <h2
+            className="font-display font-jp"
+            style={{
+              fontSize: 34,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.12,
+              marginTop: 16,
+            }}
+          >
+            先頭に立つ人たちの、
+            <br />
+            静かな集団
+          </h2>
+          <p
+            className="font-jp"
+            style={{
+              marginTop: 18,
+              fontSize: 13,
+              lineHeight: 1.9,
+              fontWeight: 300,
+              color: "var(--fg-dim)",
+            }}
+          >
+            「先端 / 先陣 / 先頭」 —
+            AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実践と実装の知見を持ち寄る場所。
+          </p>
         </Reveal>
         <Reveal>
-        <div style={{ marginTop: 32 }}>
-          {PILLARS.map((p, i) => (
-            <div
-              key={p.en}
-              style={{ padding: "20px 0", borderTop: "1px solid var(--line)" }}
-            >
+          <div style={{ marginTop: 32 }}>
+            {PILLARS.map((p, i) => (
               <div
-                className="mono-label"
-                style={{ fontSize: 10, marginBottom: 8 }}
-              >
-                0{i + 1} · {p.en}
-              </div>
-              <div
-                className="font-display font-jp"
-                style={{ fontSize: 22, fontWeight: 500, marginBottom: 6 }}
-              >
-                {p.jp}
-              </div>
-              <div
+                key={p.en}
                 style={{
-                  fontSize: 12,
-                  color: "var(--fg-dim)",
-                  lineHeight: 1.7,
+                  padding: "20px 0",
+                  borderTop: "1px solid var(--line)",
                 }}
               >
-                {p.d}
+                <div
+                  className="mono-label"
+                  style={{ fontSize: 10, marginBottom: 8 }}
+                >
+                  0{i + 1} · {p.en}
+                </div>
+                <div
+                  className="font-display font-jp"
+                  style={{ fontSize: 22, fontWeight: 500, marginBottom: 6 }}
+                >
+                  {p.jp}
+                </div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    color: "var(--fg-dim)",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {p.d}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </Reveal>
       </div>
 
@@ -370,82 +368,85 @@ export default function MobileLanding() {
         data-theme="light"
       >
         <Reveal>
-        <div className="section-idx">— 03 / WHO</div>
-        <h2
-          className="font-display font-jp"
-          style={{
-            fontSize: 34,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.12,
-            marginTop: 20,
-            marginBottom: 28,
-          }}
-        >
-          この場所が
-          <br />
-          向いている人。
-        </h2>
-        </Reveal>
-        <Reveal>
-        <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
-          FIT
-        </div>
-        {FIT.map((x, i) => (
-          <div
-            key={x}
+          <div className="section-idx">— 03 / WHO</div>
+          <h2
+            className="font-display font-jp"
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "12px 0",
-              borderTop: "1px solid var(--line-soft)",
+              fontSize: 34,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.12,
+              marginTop: 20,
+              marginBottom: 28,
             }}
           >
-            <span className="font-jp" style={{ fontSize: 15 }}>
-              {x}
-            </span>
-            <span className="mono-label" style={{ fontSize: 10 }}>
-              0{i + 1}
-            </span>
-          </div>
-        ))}
+            この場所が
+            <br />
+            向いている人。
+          </h2>
         </Reveal>
         <Reveal>
-        <div
-          className="mono-label"
-          style={{
-            fontSize: 10,
-            marginTop: 32,
-            marginBottom: 14,
-            color: "var(--danger)",
-          }}
-        >
-          NOT FIT
-        </div>
-        {NOT_FIT.map((x, i) => (
           <div
-            key={x}
+            className="mono-label"
+            style={{ fontSize: 10, marginBottom: 14 }}
+          >
+            FIT
+          </div>
+          {FIT.map((x, i) => (
+            <div
+              key={x}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "12px 0",
+                borderTop: "1px solid var(--line-soft)",
+              }}
+            >
+              <span className="font-jp" style={{ fontSize: 15 }}>
+                {x}
+              </span>
+              <span className="mono-label" style={{ fontSize: 10 }}>
+                0{i + 1}
+              </span>
+            </div>
+          ))}
+        </Reveal>
+        <Reveal>
+          <div
+            className="mono-label"
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "12px 0",
-              borderTop: "1px solid var(--line-soft)",
+              fontSize: 10,
+              marginTop: 32,
+              marginBottom: 14,
+              color: "var(--danger)",
             }}
           >
-            <span
-              className="font-jp"
-              style={{ fontSize: 14, color: "var(--fg-dim)" }}
-            >
-              {x}
-            </span>
-            <span
-              className="mono-label"
-              style={{ fontSize: 10, color: "var(--danger)" }}
-            >
-              0{i + 1}
-            </span>
+            NOT FIT
           </div>
-        ))}
+          {NOT_FIT.map((x, i) => (
+            <div
+              key={x}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "12px 0",
+                borderTop: "1px solid var(--line-soft)",
+              }}
+            >
+              <span
+                className="font-jp"
+                style={{ fontSize: 14, color: "var(--fg-dim)" }}
+              >
+                {x}
+              </span>
+              <span
+                className="mono-label"
+                style={{ fontSize: 10, color: "var(--danger)" }}
+              >
+                0{i + 1}
+              </span>
+            </div>
+          ))}
         </Reveal>
       </div>
 
@@ -458,57 +459,57 @@ export default function MobileLanding() {
         id="s3"
       >
         <Reveal>
-        <div className="section-idx">— 04 / VALUES</div>
-        <h2
-          className="font-display"
-          style={{
-            fontSize: 34,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.12,
-            marginTop: 20,
-            marginBottom: 28,
-          }}
-        >
-          実践者の、
-          <br />
-          4つの原則。
-        </h2>
-        </Reveal>
-        <Reveal>
-        {VALUES.map((v, i) => (
-          <div
-            key={v[0]}
+          <div className="section-idx">— 04 / VALUES</div>
+          <h2
+            className="font-display"
             style={{
-              display: "grid",
-              gridTemplateColumns: "36px 1fr 1fr",
-              gap: 8,
-              padding: "16px 0",
-              borderTop: "1px solid var(--line-soft)",
-              alignItems: "baseline",
+              fontSize: 34,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.12,
+              marginTop: 20,
+              marginBottom: 28,
             }}
           >
-            <span className="mono-label" style={{ fontSize: 10 }}>
-              / 0{i + 1}
-            </span>
-            <span
-              className="font-display"
-              style={{ fontSize: 16, fontWeight: 500 }}
-            >
-              {v[0]}
-            </span>
-            <span
-              className="font-jp"
+            実践者の、
+            <br />
+            4つの原則。
+          </h2>
+        </Reveal>
+        <Reveal>
+          {VALUES.map((v, i) => (
+            <div
+              key={v[0]}
               style={{
-                fontSize: 11,
-                color: "var(--fg-dim)",
-                textAlign: "right",
+                display: "grid",
+                gridTemplateColumns: "36px 1fr 1fr",
+                gap: 8,
+                padding: "16px 0",
+                borderTop: "1px solid var(--line-soft)",
+                alignItems: "baseline",
               }}
             >
-              {v[1]}
-            </span>
-          </div>
-        ))}
+              <span className="mono-label" style={{ fontSize: 10 }}>
+                / 0{i + 1}
+              </span>
+              <span
+                className="font-display"
+                style={{ fontSize: 16, fontWeight: 500 }}
+              >
+                {v[0]}
+              </span>
+              <span
+                className="font-jp"
+                style={{
+                  fontSize: 11,
+                  color: "var(--fg-dim)",
+                  textAlign: "right",
+                }}
+              >
+                {v[1]}
+              </span>
+            </div>
+          ))}
         </Reveal>
       </div>
 
@@ -524,53 +525,61 @@ export default function MobileLanding() {
         data-theme="light"
       >
         <Reveal>
-        <div className="section-idx">— 05 / MEMBERSHIP</div>
-        <h2
-          className="font-display font-jp"
-          style={{
-            fontSize: 32,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.15,
-            marginTop: 20,
-            marginBottom: 28,
-          }}
-        >
-          応募から入会までの、4ステップ。
-        </h2>
-        </Reveal>
-        <Reveal>
-        <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
-          FLOW
-        </div>
-        {STEPS.map((s, i) => (
-          <div
-            key={s[0]}
+          <div className="section-idx">— 05 / MEMBERSHIP</div>
+          <h2
+            className="font-display font-jp"
             style={{
-              display: "flex",
-              gap: 16,
-              padding: "18px 0",
-              borderTop: "1px solid var(--line-soft)",
-              alignItems: "center",
+              fontSize: 32,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.15,
+              marginTop: 20,
+              marginBottom: 28,
             }}
           >
-            <div
-              style={{
-                width: 10,
-                height: 10,
-                borderRadius: "50%",
-                border: "1px solid var(--accent)",
-                background: i === 0 ? "var(--accent)" : "transparent",
-              }}
-            />
-            <div className="mono-label" style={{ fontSize: 10, width: 28 }}>
-              {s[0]}
-            </div>
-            <div className="font-jp" style={{ fontSize: 14, fontWeight: 500 }}>
-              {s[1]}
-            </div>
+            応募から入会
+            <br />
+            までのステップ。
+          </h2>
+        </Reveal>
+        <Reveal>
+          <div
+            className="mono-label"
+            style={{ fontSize: 10, marginBottom: 14 }}
+          >
+            FLOW
           </div>
-        ))}
+          {STEPS.map((s, i) => (
+            <div
+              key={s[0]}
+              style={{
+                display: "flex",
+                gap: 16,
+                padding: "18px 0",
+                borderTop: "1px solid var(--line-soft)",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  width: 10,
+                  height: 10,
+                  borderRadius: "50%",
+                  border: "1px solid var(--accent)",
+                  background: i === 0 ? "var(--accent)" : "transparent",
+                }}
+              />
+              <div className="mono-label" style={{ fontSize: 10, width: 28 }}>
+                {s[0]}
+              </div>
+              <div
+                className="font-jp"
+                style={{ fontSize: 14, fontWeight: 500 }}
+              >
+                {s[1]}
+              </div>
+            </div>
+          ))}
         </Reveal>
       </div>
 
@@ -586,78 +595,78 @@ export default function MobileLanding() {
         data-theme="light"
       >
         <Reveal>
-        <div className="section-idx">— 06 / FAQ</div>
-        <h2
-          className="font-display"
-          style={{
-            fontSize: 34,
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.12,
-            marginTop: 20,
-            marginBottom: 28,
-          }}
-        >
-          FAQ.
-        </h2>
+          <div className="section-idx">— 06 / FAQ</div>
+          <h2
+            className="font-display"
+            style={{
+              fontSize: 34,
+              fontWeight: 500,
+              letterSpacing: "-0.02em",
+              lineHeight: 1.12,
+              marginTop: 20,
+              marginBottom: 28,
+            }}
+          >
+            FAQ.
+          </h2>
         </Reveal>
         <Reveal>
-        {FAQS.map((it, i) => {
-          const isOpen = open === i;
-          return (
-            <div
-              key={it[0]}
-              style={{ borderTop: "1px solid var(--line-soft)" }}
-            >
-              <button
-                type="button"
-                onClick={() => setOpen(isOpen ? -1 : i)}
-                style={{
-                  width: "100%",
-                  padding: "18px 0",
-                  background: "transparent",
-                  border: "none",
-                  color: "var(--fg)",
-                  display: "grid",
-                  gridTemplateColumns: "1fr 20px",
-                  gap: 12,
-                  alignItems: "center",
-                  textAlign: "left",
-                  cursor: "pointer",
-                }}
+          {FAQS.map((it, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={it[0]}
+                style={{ borderTop: "1px solid var(--line-soft)" }}
               >
-                <span
-                  className="font-jp"
-                  style={{ fontSize: 13, fontWeight: 500 }}
-                >
-                  {it[0]}
-                </span>
-                <span
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? -1 : i)}
                   style={{
-                    transition: "transform .3s",
-                    transform: isOpen ? "rotate(45deg)" : "none",
-                    fontSize: 18,
-                    color: "var(--fg-dim)",
+                    width: "100%",
+                    padding: "18px 0",
+                    background: "transparent",
+                    border: "none",
+                    color: "var(--fg)",
+                    display: "grid",
+                    gridTemplateColumns: "1fr 20px",
+                    gap: 12,
+                    alignItems: "center",
+                    textAlign: "left",
+                    cursor: "pointer",
                   }}
                 >
-                  +
-                </span>
-              </button>
-              {isOpen && (
-                <div
-                  style={{
-                    fontSize: 12,
-                    color: "var(--fg-dim)",
-                    lineHeight: 1.85,
-                    paddingBottom: 18,
-                  }}
-                >
-                  {it[1]}
-                </div>
-              )}
-            </div>
-          );
-        })}
+                  <span
+                    className="font-jp"
+                    style={{ fontSize: 13, fontWeight: 500 }}
+                  >
+                    {it[0]}
+                  </span>
+                  <span
+                    style={{
+                      transition: "transform .3s",
+                      transform: isOpen ? "rotate(45deg)" : "none",
+                      fontSize: 18,
+                      color: "var(--fg-dim)",
+                    }}
+                  >
+                    +
+                  </span>
+                </button>
+                {isOpen && (
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: "var(--fg-dim)",
+                      lineHeight: 1.85,
+                      paddingBottom: 18,
+                    }}
+                  >
+                    {it[1]}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </Reveal>
       </div>
 
@@ -670,39 +679,41 @@ export default function MobileLanding() {
         }}
       >
         <Reveal>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <span className="mono-label" style={{ fontSize: 9 }}>
-            FINAL WORD
-          </span>
-        </div>
-        <h2
-          className="font-display font-jp"
-          style={{
-            fontSize: 44,
-            lineHeight: 1.1,
-            letterSpacing: "-0.03em",
-            fontWeight: 400,
-            marginTop: 24,
-          }}
-        >
-          <span style={{ fontWeight: 300 }}>共に</span>
-          <span style={{ fontStyle: "italic", fontWeight: 600 }}>最前線へ</span>
-        </h2>
-        <a
-          href={APPLY_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary"
-          style={{
-            fontSize: 12,
-            padding: "14px 18px",
-            justifyContent: "center",
-            marginTop: 36,
-            display: "inline-flex",
-          }}
-        >
-          入会を申し込む <span className="arrow">→</span>
-        </a>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <span className="mono-label" style={{ fontSize: 9 }}>
+              FINAL WORD
+            </span>
+          </div>
+          <h2
+            className="font-display font-jp"
+            style={{
+              fontSize: 44,
+              lineHeight: 1.1,
+              letterSpacing: "-0.03em",
+              fontWeight: 400,
+              marginTop: 24,
+            }}
+          >
+            <span style={{ fontWeight: 300 }}>共に</span>
+            <span style={{ fontStyle: "italic", fontWeight: 600 }}>
+              最前線へ
+            </span>
+          </h2>
+          <a
+            href={APPLY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+            style={{
+              fontSize: 12,
+              padding: "14px 18px",
+              justifyContent: "center",
+              marginTop: 36,
+              display: "inline-flex",
+            }}
+          >
+            入会を申し込む <span className="arrow">→</span>
+          </a>
         </Reveal>
       </div>
 
