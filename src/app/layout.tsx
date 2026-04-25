@@ -24,7 +24,7 @@ const SITE_URL = "https://globis-ai-front.pages.dev";
 const SITE_NAME = "GLOBIS AI Front";
 const SITE_DESCRIPTION =
   "経営とAIを融合させるためのクローズドコミュニティ。AI時代、最前線の実践者コミュニティ。";
-const OGP_IMAGE = "/hero-banner.png";
+const OGP_IMAGE = "/banner.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: OGP_IMAGE,
-        width: 920,
-        height: 622,
+        width: 2726,
+        height: 1412,
         alt: SITE_NAME,
       },
     ],
