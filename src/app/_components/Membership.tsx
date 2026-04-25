@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Reveal from "./Reveal";
+
 const MUST = [
   { t: "GLOBIS生", d: "GLOBISの在校生・卒業生であること。" },
   { t: "AI使用実績", d: "AIを業務で活用していること。" },
@@ -39,6 +41,7 @@ export default function Membership() {
       data-theme="light"
       style={{ background: "var(--bg)", color: "var(--fg)" }}
     >
+      <Reveal>
       <div className="section-head">
         <div className="section-idx">— 05 / MEMBERSHIP</div>
         <div>
@@ -61,8 +64,10 @@ export default function Membership() {
           </h2>
         </div>
       </div>
+      </Reveal>
 
       {/* MUST */}
+      <Reveal>
       <div style={{ marginBottom: 96 }}>
         <div className="mono-label" style={{ marginBottom: 24 }}>
           MUST — 必須条件
@@ -105,8 +110,10 @@ export default function Membership() {
           ))}
         </div>
       </div>
+      </Reveal>
 
       {/* Stepper */}
+      <Reveal>
       <div>
         <div className="mono-label" style={{ marginBottom: 24 }}>
           FLOW — 入会フロー
@@ -197,6 +204,7 @@ export default function Membership() {
           ))}
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }

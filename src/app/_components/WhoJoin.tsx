@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const FIT = [
   { k: "経営者", d: "自社のAI活用の最終意思決定を担う人。" },
   { k: "事業オーナー", d: "P/Lを背負い、収益にAIを接続したい人。" },
@@ -20,6 +22,7 @@ export default function WhoJoin() {
       data-theme="light"
       style={{ background: "var(--bg)", color: "var(--fg)" }}
     >
+      <Reveal>
       <div className="section-head">
         <div className="section-idx">— 03 / WHO</div>
         <div>
@@ -39,8 +42,10 @@ export default function WhoJoin() {
           </h2>
         </div>
       </div>
+      </Reveal>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72 }}>
+        <Reveal>
         <div>
           <div className="mono-label" style={{ marginBottom: 28 }}>
             FIT
@@ -83,6 +88,8 @@ export default function WhoJoin() {
             ))}
           </div>
         </div>
+        </Reveal>
+        <Reveal>
         <div>
           <div
             className="mono-label"
@@ -131,6 +138,7 @@ export default function WhoJoin() {
             ))}
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

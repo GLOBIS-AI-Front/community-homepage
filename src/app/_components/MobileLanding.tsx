@@ -4,6 +4,8 @@ import { useState } from "react";
 
 import { APPLY_FORM_URL } from "../_constants";
 
+import Reveal from "./Reveal";
+
 const METRICS: [string, string][] = [
   ["情報感度", "高"],
   ["心理的安全性", "高"],
@@ -221,6 +223,7 @@ export default function MobileLanding() {
         }}
         id="s0"
       >
+        <Reveal>
         <div className="section-idx">— 01 / WHY NOW</div>
         <h2
           className="font-display font-jp"
@@ -248,6 +251,8 @@ export default function MobileLanding() {
         >
           情報交換の場は豊富にある一方で、実装と収益に接続する場は、驚くほど少ない。
         </p>
+        </Reveal>
+        <Reveal>
         <div style={{ marginTop: 28, borderTop: "1px solid var(--line)" }}>
           {METRICS.map((r, i) => (
             <div
@@ -272,6 +277,7 @@ export default function MobileLanding() {
             </div>
           ))}
         </div>
+        </Reveal>
       </div>
 
       {/* What is — pillars */}
@@ -285,6 +291,7 @@ export default function MobileLanding() {
         id="s1"
         data-theme="light"
       >
+        <Reveal>
         <div className="section-idx">— 02 / WHAT IS IT</div>
         <div className="eyebrow" style={{ marginTop: 16 }}>
           GLOBIS AI FRONT
@@ -316,6 +323,8 @@ export default function MobileLanding() {
           「先端 / 先陣 / 先頭」 —
           AI実装・事業活用の最前線に立つ人たちが、ギブを先に差し出し、実践と実装の知見を持ち寄る場所。
         </p>
+        </Reveal>
+        <Reveal>
         <div style={{ marginTop: 32 }}>
           {PILLARS.map((p, i) => (
             <div
@@ -346,6 +355,7 @@ export default function MobileLanding() {
             </div>
           ))}
         </div>
+        </Reveal>
       </div>
 
       {/* Who */}
@@ -359,6 +369,7 @@ export default function MobileLanding() {
         id="s2"
         data-theme="light"
       >
+        <Reveal>
         <div className="section-idx">— 03 / WHO</div>
         <h2
           className="font-display font-jp"
@@ -375,6 +386,8 @@ export default function MobileLanding() {
           <br />
           向いている人。
         </h2>
+        </Reveal>
+        <Reveal>
         <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
           FIT
         </div>
@@ -396,6 +409,8 @@ export default function MobileLanding() {
             </span>
           </div>
         ))}
+        </Reveal>
+        <Reveal>
         <div
           className="mono-label"
           style={{
@@ -431,6 +446,7 @@ export default function MobileLanding() {
             </span>
           </div>
         ))}
+        </Reveal>
       </div>
 
       {/* Values */}
@@ -441,6 +457,7 @@ export default function MobileLanding() {
         }}
         id="s3"
       >
+        <Reveal>
         <div className="section-idx">— 04 / VALUES</div>
         <h2
           className="font-display"
@@ -457,6 +474,8 @@ export default function MobileLanding() {
           <br />
           4つの原則。
         </h2>
+        </Reveal>
+        <Reveal>
         {VALUES.map((v, i) => (
           <div
             key={v[0]}
@@ -490,6 +509,7 @@ export default function MobileLanding() {
             </span>
           </div>
         ))}
+        </Reveal>
       </div>
 
       {/* Membership */}
@@ -503,6 +523,7 @@ export default function MobileLanding() {
         id="s4"
         data-theme="light"
       >
+        <Reveal>
         <div className="section-idx">— 05 / MEMBERSHIP</div>
         <h2
           className="font-display font-jp"
@@ -517,6 +538,8 @@ export default function MobileLanding() {
         >
           応募から入会までの、4ステップ。
         </h2>
+        </Reveal>
+        <Reveal>
         <div className="mono-label" style={{ fontSize: 10, marginBottom: 14 }}>
           FLOW
         </div>
@@ -548,6 +571,7 @@ export default function MobileLanding() {
             </div>
           </div>
         ))}
+        </Reveal>
       </div>
 
       {/* FAQ */}

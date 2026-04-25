@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 type Row = {
   k: string;
   v: string;
@@ -111,28 +113,31 @@ const ROWS: Row[] = [
 export default function WhyNow() {
   return (
     <section className="section" id="s0">
-      <div className="section-head">
-        <div>
-          <div className="section-idx">— 01 / WHY NOW</div>
+      <Reveal>
+        <div className="section-head">
+          <div>
+            <div className="section-idx">— 01 / WHY NOW</div>
+          </div>
+          <div>
+            <h2
+              className="font-display"
+              style={{
+                fontSize: 72,
+                lineHeight: 1.05,
+                letterSpacing: "-0.035em",
+                fontWeight: 500,
+                maxWidth: 1000,
+              }}
+            >
+              「情報収集」で
+              <br />
+              止まっていないか。
+            </h2>
+          </div>
         </div>
-        <div>
-          <h2
-            className="font-display"
-            style={{
-              fontSize: 72,
-              lineHeight: 1.05,
-              letterSpacing: "-0.035em",
-              fontWeight: 500,
-              maxWidth: 1000,
-            }}
-          >
-            「情報収集」で
-            <br />
-            止まっていないか。
-          </h2>
-        </div>
-      </div>
+      </Reveal>
 
+      <Reveal>
       <div className="grid-12">
         <div style={{ gridColumn: "span 3" }}>
           <div className="mono-label">CONTEXT</div>
@@ -166,7 +171,9 @@ export default function WhyNow() {
           </p>
         </div>
       </div>
+      </Reveal>
 
+      <Reveal>
       <div style={{ marginTop: 96 }}>
         <div
           style={{
@@ -254,6 +261,7 @@ export default function WhyNow() {
           ))}
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }

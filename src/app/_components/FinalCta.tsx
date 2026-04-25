@@ -1,5 +1,7 @@
 import { APPLY_FORM_URL } from "../_constants";
 
+import Reveal from "./Reveal";
+
 export default function FinalCta() {
   return (
     <section
@@ -44,6 +46,7 @@ export default function FinalCta() {
         }}
       />
 
+      <Reveal>
       <div
         style={{
           position: "relative",
@@ -125,6 +128,7 @@ export default function FinalCta() {
           </a>
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }

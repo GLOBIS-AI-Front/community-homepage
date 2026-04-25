@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Reveal from "./Reveal";
+
 const ITEMS = [
   {
     q: "コミュニティは完全にクローズドですか？",
@@ -27,6 +29,7 @@ export default function Faq() {
       data-theme="light"
       style={{ background: "var(--bg)", color: "var(--fg)" }}
     >
+      <Reveal>
       <div className="section-head">
         <div className="section-idx">— 06 / FAQ</div>
         <div>
@@ -47,6 +50,8 @@ export default function Faq() {
           </h2>
         </div>
       </div>
+      </Reveal>
+      <Reveal>
       <div style={{ borderTop: "1px solid var(--line)" }}>
         {ITEMS.map((it, i) => {
           const isOpen = open === i;
@@ -136,6 +141,7 @@ export default function Faq() {
           );
         })}
       </div>
+      </Reveal>
     </section>
   );
 }

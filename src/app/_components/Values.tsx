@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import Reveal from "./Reveal";
+
 const VALUES = [
   {
     en: "Give First",
@@ -30,6 +32,7 @@ export default function Values() {
 
   return (
     <section className="section" id="s3">
+      <Reveal>
       <div className="section-head">
         <div className="section-idx">— 04 / VALUES</div>
         <div>
@@ -52,7 +55,9 @@ export default function Values() {
           </h2>
         </div>
       </div>
+      </Reveal>
 
+      <Reveal>
       <div style={{ borderTop: "1px solid var(--line)" }}>
         {VALUES.map((v, i) => (
           <div
@@ -116,6 +121,7 @@ export default function Values() {
           </div>
         ))}
       </div>
+      </Reveal>
     </section>
   );
 }

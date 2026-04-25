@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 interface PillarProps {
   idx: string;
   en: string;
@@ -100,6 +102,7 @@ export default function WhatIs() {
       data-theme="light"
       style={{ background: "var(--bg)", color: "var(--fg)" }}
     >
+      <Reveal>
       <div className="section-head">
         <div className="section-idx">— 02 / WHAT IS IT</div>
         <div>
@@ -136,7 +139,9 @@ export default function WhatIs() {
           </p>
         </div>
       </div>
+      </Reveal>
 
+      <Reveal>
       <div
         style={{
           borderTop: "1px solid var(--line)",
@@ -319,6 +324,7 @@ export default function WhatIs() {
           }
         />
       </div>
+      </Reveal>
     </section>
   );
 }
