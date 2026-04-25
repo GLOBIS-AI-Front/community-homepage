@@ -55,8 +55,33 @@ const FAQS: [string, string][] = [
   ["GLOBIS生でないと入れませんか？", "はい、GLOBIS 生が必須条件です。"],
 ];
 
+const NAV_ITEMS: [string, string][] = [
+  ["Why now", "#m-s0"],
+  ["What", "#m-s1"],
+  ["Who", "#m-s2"],
+  ["Values", "#m-s3"],
+  ["Membership", "#m-s4"],
+  ["FAQ", "#m-s5"],
+];
+
 export default function MobileLanding() {
   const [open, setOpen] = useState<number>(-1);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ): void => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const id = href.replace("#", "");
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  };
 
   return (
     <div
@@ -64,17 +89,23 @@ export default function MobileLanding() {
         background: "var(--bg)",
         color: "var(--fg)",
         fontFamily: '"Noto Sans JP","Space Grotesk",sans-serif',
-        overflow: "hidden",
+        overflow: "clip",
       }}
     >
       {/* Top nav */}
       <div
         style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 30,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           padding: "12px 22px",
           borderBottom: "1px solid var(--line-soft)",
+          backdropFilter: "blur(18px)",
+          WebkitBackdropFilter: "blur(18px)",
+          background: "color-mix(in oklab, var(--bg) 78%, transparent)",
         }}
       >
         <a
@@ -95,10 +126,185 @@ export default function MobileLanding() {
             GLOBIS AI Front
           </span>
         </a>
-        <div className="mono-label" style={{ fontSize: 9 }}>
+        <button
+          type="button"
+          onClick={() => setMenuOpen(true)}
+          aria-label="メニューを開く"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          className="mono-label"
+          style={{
+            fontSize: 9,
+            background: "transparent",
+            border: "none",
+            color: "var(--fg)",
+            cursor: "pointer",
+            padding: 4,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <span
+            aria-hidden="true"
+            style={{
+              display: "inline-flex",
+              flexDirection: "column",
+              gap: 3,
+            }}
+          >
+            <span style={{ width: 18, height: 1, background: "var(--fg)" }} />
+            <span style={{ width: 18, height: 1, background: "var(--fg)" }} />
+          </span>
           MENU
-        </div>
+        </button>
       </div>
+
+      {/* Mobile menu drawer */}
+      {menuOpen && (
+        <div
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="ナビゲーションメニュー"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 100,
+            background: "var(--bg)",
+            color: "var(--fg)",
+            display: "flex",
+            flexDirection: "column",
+            padding: "12px 22px 32px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              paddingBottom: 12,
+              borderBottom: "1px solid var(--line-soft)",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/gaf_icon.svg"
+                alt=""
+                style={{ height: 26, width: "auto", display: "block" }}
+              />
+              <span
+                className="font-display"
+                style={{ fontSize: 13, fontWeight: 500 }}
+              >
+                GLOBIS AI Front
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(false)}
+              aria-label="メニューを閉じる"
+              className="mono-label"
+              style={{
+                fontSize: 9,
+                background: "transparent",
+                border: "none",
+                color: "var(--fg)",
+                cursor: "pointer",
+                padding: 4,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              CLOSE
+              <span
+                aria-hidden="true"
+                style={{
+                  position: "relative",
+                  display: "inline-block",
+                  width: 14,
+                  height: 14,
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: 0,
+                    width: 14,
+                    height: 1,
+                    background: "var(--fg)",
+                    transform: "rotate(45deg)",
+                  }}
+                />
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: 0,
+                    width: 14,
+                    height: 1,
+                    background: "var(--fg)",
+                    transform: "rotate(-45deg)",
+                  }}
+                />
+              </span>
+            </button>
+          </div>
+          <nav
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: 24,
+            }}
+          >
+            {NAV_ITEMS.map(([label, href], i) => (
+              <a
+                key={label}
+                href={href}
+                onClick={(e) => handleNavClick(e, href)}
+                className="font-display"
+                style={{
+                  fontSize: 22,
+                  fontWeight: 500,
+                  letterSpacing: "-0.02em",
+                  padding: "18px 0",
+                  borderBottom: "1px solid var(--line-soft)",
+                  color: "var(--fg)",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "baseline",
+                }}
+              >
+                <span>{label}</span>
+                <span
+                  className="mono-label"
+                  style={{ fontSize: 10, color: "var(--fg-dim)" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </a>
+            ))}
+          </nav>
+          <a
+            href={APPLY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="btn btn-primary"
+            style={{
+              fontSize: 12,
+              padding: "14px 18px",
+              justifyContent: "center",
+              marginTop: "auto",
+            }}
+          >
+            入会を申し込む <span className="arrow">→</span>
+          </a>
+        </div>
+      )}
 
       {/* Hero */}
       <div
@@ -107,7 +313,7 @@ export default function MobileLanding() {
           position: "relative",
           overflow: "hidden",
           minHeight: 580,
-          backgroundImage: "url(/hero-banner.png)",
+          backgroundImage: "url(/hero-banner-clean.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -194,7 +400,7 @@ export default function MobileLanding() {
               入会を申し込む <span className="arrow">→</span>
             </a>
             <a
-              href="#s1"
+              href="#m-s1"
               className="btn"
               style={{
                 fontSize: 12,
@@ -216,7 +422,7 @@ export default function MobileLanding() {
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
         }}
-        id="s0"
+        id="m-s0"
       >
         <Reveal>
           <div className="section-idx">— 01 / WHY NOW</div>
@@ -283,7 +489,7 @@ export default function MobileLanding() {
           background: "var(--bg)",
           color: "var(--fg)",
         }}
-        id="s1"
+        id="m-s1"
         data-theme="light"
       >
         <Reveal>
@@ -364,7 +570,7 @@ export default function MobileLanding() {
           background: "var(--bg)",
           color: "var(--fg)",
         }}
-        id="s2"
+        id="m-s2"
         data-theme="light"
       >
         <Reveal>
@@ -456,7 +662,7 @@ export default function MobileLanding() {
           padding: "56px 22px",
           borderTop: "1px solid var(--line-soft)",
         }}
-        id="s3"
+        id="m-s3"
       >
         <Reveal>
           <div className="section-idx">— 04 / VALUES</div>
@@ -521,7 +727,7 @@ export default function MobileLanding() {
           background: "var(--bg)",
           color: "var(--fg)",
         }}
-        id="s4"
+        id="m-s4"
         data-theme="light"
       >
         <Reveal>
@@ -591,7 +797,7 @@ export default function MobileLanding() {
           background: "var(--bg)",
           color: "var(--fg)",
         }}
-        id="s5"
+        id="m-s5"
         data-theme="light"
       >
         <Reveal>
@@ -673,48 +879,84 @@ export default function MobileLanding() {
       {/* Final CTA */}
       <div
         style={{
+          position: "relative",
+          overflow: "hidden",
           padding: "80px 22px",
           borderTop: "1px solid var(--line-soft)",
           textAlign: "center",
         }}
       >
-        <Reveal>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <span className="mono-label" style={{ fontSize: 9 }}>
-              FINAL WORD
-            </span>
-          </div>
-          <h2
-            className="font-display font-jp"
-            style={{
-              fontSize: 44,
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
-              fontWeight: 400,
-              marginTop: 24,
-            }}
-          >
-            <span style={{ fontWeight: 300 }}>共に</span>
-            <span style={{ fontStyle: "italic", fontWeight: 600 }}>
-              最前線へ
-            </span>
-          </h2>
-          <a
-            href={APPLY_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-            style={{
-              fontSize: 12,
-              padding: "14px 18px",
-              justifyContent: "center",
-              marginTop: 36,
-              display: "inline-flex",
-            }}
-          >
-            入会を申し込む <span className="arrow">→</span>
-          </a>
-        </Reveal>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "url(/hero-banner-clean.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 55%",
+            filter: "saturate(.75) brightness(.85)",
+            opacity: 0.55,
+            transform: "scale(1.2)",
+            transformOrigin: "center",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, var(--bg) 0%, color-mix(in oklab, var(--bg) 35%, transparent) 25%, color-mix(in oklab, var(--bg) 35%, transparent) 70%, var(--bg) 100%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 16,
+            right: 16,
+            top: 16,
+            bottom: 16,
+            border: "1px solid color-mix(in oklab, var(--fg) 14%, transparent)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <Reveal>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <span className="mono-label" style={{ fontSize: 9 }}>
+                FINAL WORD
+              </span>
+            </div>
+            <h2
+              className="font-display font-jp"
+              style={{
+                fontSize: 44,
+                lineHeight: 1.1,
+                letterSpacing: "-0.03em",
+                fontWeight: 400,
+                marginTop: 24,
+              }}
+            >
+              <span style={{ fontWeight: 300 }}>共に</span>
+              <span style={{ fontStyle: "italic", fontWeight: 600 }}>
+                最前線へ
+              </span>
+            </h2>
+            <a
+              href={APPLY_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+              style={{
+                fontSize: 12,
+                padding: "14px 18px",
+                justifyContent: "center",
+                marginTop: 36,
+                display: "inline-flex",
+              }}
+            >
+              入会を申し込む <span className="arrow">→</span>
+            </a>
+          </Reveal>
+        </div>
       </div>
 
       {/* Footer */}
