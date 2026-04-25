@@ -20,12 +20,40 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
+const SITE_URL = "https://globis-ai-front.pages.dev";
+const SITE_NAME = "GLOBIS AI Front";
+const SITE_DESCRIPTION =
+  "経営とAIを融合させるためのクローズドコミュニティ。AI時代、最前線の実践者コミュニティ。";
+const OGP_IMAGE = "/hero-banner.png";
+
 export const metadata: Metadata = {
-  title: "GLOBIS AI Front",
-  description:
-    "GLOBIS発、AI実装者のためのクローズドコミュニティ。AI時代、最前線の実践者コミュニティ。",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
   icons: {
     icon: "/gaf_icon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: OGP_IMAGE,
+        width: 920,
+        height: 622,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [OGP_IMAGE],
   },
 };
 
