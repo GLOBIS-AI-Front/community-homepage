@@ -510,9 +510,9 @@ export default function MobileLanding() {
               marginTop: 16,
             }}
           >
-            先頭に立つ人たちの、
+            答えのない先端を、
             <br />
-            静かな集団
+            全力で楽しめる集団。
           </h2>
           <p
             className="font-jp"
