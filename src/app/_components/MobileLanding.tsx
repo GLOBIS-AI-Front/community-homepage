@@ -585,6 +585,7 @@ export default function MobileLanding() {
         id="s5"
         data-theme="light"
       >
+        <Reveal>
         <div className="section-idx">— 06 / FAQ</div>
         <h2
           className="font-display"
@@ -599,6 +600,8 @@ export default function MobileLanding() {
         >
           FAQ.
         </h2>
+        </Reveal>
+        <Reveal>
         {FAQS.map((it, i) => {
           const isOpen = open === i;
           return (
@@ -655,6 +658,7 @@ export default function MobileLanding() {
             </div>
           );
         })}
+        </Reveal>
       </div>
 
       {/* Final CTA */}
@@ -665,6 +669,7 @@ export default function MobileLanding() {
           textAlign: "center",
         }}
       >
+        <Reveal>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <span className="mono-label" style={{ fontSize: 9 }}>
             FINAL WORD
@@ -698,6 +703,7 @@ export default function MobileLanding() {
         >
           入会を申し込む <span className="arrow">→</span>
         </a>
+        </Reveal>
       </div>
 
       {/* Footer */}

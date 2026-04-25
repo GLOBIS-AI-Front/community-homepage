@@ -1,7 +1,34 @@
-const COLUMNS = [
-  { h: "Community", l: ["Why Now", "What is", "Values", "Membership"] },
-  { h: "Access", l: ["審査応募", "お問い合わせ", "運営について"] },
-  { h: "Legal", l: ["プライバシー", "特定商取引法", "運営会社"] },
+import { APPLY_FORM_URL } from "../_constants";
+
+interface FooterLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+interface FooterColumn {
+  h: string;
+  l: FooterLink[];
+}
+
+const COLUMNS: FooterColumn[] = [
+  {
+    h: "Community",
+    l: [
+      { label: "Why Now", href: "#s0" },
+      { label: "What is", href: "#s1" },
+      { label: "Who", href: "#s2" },
+      { label: "Values", href: "#s3" },
+      { label: "Membership", href: "#s4" },
+    ],
+  },
+  {
+    h: "Apply",
+    l: [
+      { label: "FAQ", href: "#s5" },
+      { label: "Apply Form", href: APPLY_FORM_URL, external: true },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -12,7 +39,7 @@ export default function Footer() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1fr",
+          gridTemplateColumns: "2fr 1fr 1fr",
           gap: 48,
           marginBottom: 64,
         }}
@@ -66,13 +93,16 @@ export default function Footer() {
               / {c.h}
             </div>
             {c.l.map((x) => (
-              <div key={x} style={{ marginBottom: 10 }}>
+              <div key={x.label} style={{ marginBottom: 10 }}>
                 <a
-                  href="#"
+                  href={x.href}
+                  {...(x.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="ul-link font-jp"
                   style={{ fontSize: 13, color: "var(--fg-dim)" }}
                 >
-                  {x}
+                  {x.label}
                 </a>
               </div>
             ))}
@@ -90,7 +120,7 @@ export default function Footer() {
         <div className="mono-label">
           © 2026 GLOBIS AI FRONT · ALL RIGHTS RESERVED
         </div>
-        <div className="mono-label">BUILT FOR OPERATORS</div>
+        <div className="mono-label">BUILT FOR RYOTA</div>
       </div>
     </footer>
   );
