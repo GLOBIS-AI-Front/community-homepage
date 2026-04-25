@@ -327,8 +327,8 @@ export default function MobileLanding() {
           }}
         />
         <div style={{ position: "relative", zIndex: 2 }}>
-          <div className="eyebrow" style={{ fontSize: 9 }}>
-            NORTH · 60°12′N / BLUE HOUR
+          <div className="eyebrow" style={{ fontSize: 9, color: "#fff" }}>
+            AI Community
           </div>
           <h1
             className="font-display"
