@@ -641,11 +641,10 @@ export default function MobileLanding() {
           textAlign: "center",
         }}
       >
-        <div
-          className="eyebrow"
-          style={{ fontSize: 9, justifyContent: "center" }}
-        >
-          FINAL WORD
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <span className="mono-label" style={{ fontSize: 9 }}>
+            FINAL WORD
+          </span>
         </div>
         <h2
           className="font-display font-jp"
@@ -657,14 +656,8 @@ export default function MobileLanding() {
             marginTop: 24,
           }}
         >
-          先に、
-          <br />
-          <span style={{ fontStyle: "italic", fontWeight: 300 }}>
-            ギブしに来てください
-            <span style={{ color: "var(--accent)", fontStyle: "normal" }}>
-              .
-            </span>
-          </span>
+          <span style={{ fontWeight: 300 }}>共に</span>
+          <span style={{ fontStyle: "italic", fontWeight: 600 }}>最前線へ</span>
         </h2>
         <a
           href={APPLY_FORM_URL}

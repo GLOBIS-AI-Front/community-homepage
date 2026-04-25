@@ -53,14 +53,15 @@ export default function FinalCta() {
         }}
       >
         <div
-          className="eyebrow"
           style={{
+            display: "flex",
             justifyContent: "center",
             marginBottom: 44,
-            color: "var(--fg)",
           }}
         >
-          FINAL WORD
+          <span className="mono-label" style={{ color: "var(--fg)" }}>
+            FINAL WORD
+          </span>
         </div>
         <h2
           className="font-display font-jp"
@@ -74,12 +75,8 @@ export default function FinalCta() {
               "0 2px 40px color-mix(in oklab, var(--bg) 40%, transparent)",
           }}
         >
-          先に、
-          <br />
-          <span style={{ fontStyle: "italic", fontWeight: 300 }}>
-            ギブしに来てください
-            <span style={{ color: "var(--accent)", fontStyle: "normal" }}>.</span>
-          </span>
+          <span style={{ fontWeight: 300 }}>共に</span>
+          <span style={{ fontStyle: "italic", fontWeight: 600 }}>最前線へ</span>
         </h2>
         <p
           style={{
@@ -91,9 +88,9 @@ export default function FinalCta() {
             margin: "40px auto 0",
           }}
         >
-          受け取る前に、渡す。それを共有できる人だけが、この場に相応しい。
+          実践者が繋がるコミュニティです。
           <br />
-          まず、あなたの手元で動いているものを教えてください。
+          共にAI活用の最前線へ飛び込みましょう。
         </p>
         <div
           style={{
