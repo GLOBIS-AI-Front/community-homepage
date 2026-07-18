@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers 静的アセット配信の設定。`pnpm build`（next build, output: "export"）が
+  // 生成する out/ をそのまま配信する。name はCloudflare のプロジェクト（Worker）名と一致させること。
+  "name": "ai-front",
+  "compatibility_date": "2026-07-19",
+  "assets": {
+    "directory": "./out",
+    // 静的エクスポートが生成する 404.html を Not Found 応答に使う
+    "not_found_handling": "404-page"
+  }
+}
