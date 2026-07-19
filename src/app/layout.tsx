@@ -20,7 +20,7 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const SITE_URL = "https://globis-ai-front.pages.dev";
+const SITE_URL = "https://ai-front-community.pages.dev";
 const SITE_NAME = "GLOBIS AI Front";
 const SITE_DESCRIPTION =
   "経営とAIを融合させるためのクローズドコミュニティ。AI時代、最前線の実践者コミュニティ。";
